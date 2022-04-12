@@ -1,0 +1,34 @@
+(** @canonical Snake_lib.Apple *)
+module Apple = Snake_lib__Apple
+
+
+(** @canonical Snake_lib.Board *)
+module Board = Snake_lib__Board
+
+
+(** @canonical Snake_lib.Direction *)
+module Direction = Snake_lib__Direction
+
+
+(** @canonical Snake_lib.Game *)
+module Game = Snake_lib__Game
+
+
+(** @canonical Snake_lib.Game_state *)
+module Game_state = Snake_lib__Game_state
+
+
+(** @canonical Snake_lib.Position *)
+module Position = Snake_lib__Position
+
+
+(** @canonical Snake_lib.Run *)
+module Run = Snake_lib__Run
+
+
+(** @canonical Snake_lib.Snake *)
+module Snake = Snake_lib__Snake
+
+
+(** @canonical Snake_lib.Snake_graphics *)
+module Snake_graphics = Snake_lib__Snake_graphics

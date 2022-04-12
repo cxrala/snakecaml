@@ -1,0 +1,117 @@
+# dune exec bin/snake.exe
+# OCAMLPARAM: unset
+# Workspace root: /home/ubuntu/snake
+$ /usr/bin/nproc > /tmp/dune4c8e13.output 2> /dev/null
+# Auto-detected concurrency: 2
+# disable binary cache
+$ /home/ubuntu/.opam/4.13.1/bin/ocamlc.opt -config > /tmp/dune73bb5e.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/ubuntu/.opam/4.13.1/lib/toplevel"
+#  ; ocaml_bin = External "/home/ubuntu/.opam/4.13.1/bin"
+#  ; ocaml = Ok External "/home/ubuntu/.opam/4.13.1/bin/ocaml"
+#  ; ocamlc = External "/home/ubuntu/.opam/4.13.1/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/ubuntu/.opam/4.13.1/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/ubuntu/.opam/4.13.1/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/ubuntu/.opam/4.13.1/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/ubuntu/.opam/4.13.1/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/ubuntu/.opam/4.13.1/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/ubuntu/snake"
+#        ; "INSIDE_DUNE" : "/home/ubuntu/snake/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/ubuntu/snake/_build/install/default/lib"
+#        ; "OCAMLPATH" : "/home/ubuntu/snake/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/ubuntu/snake/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/ubuntu/.opam/4.13.1/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.13.1"
+#      ; standard_library_default = "/home/ubuntu/.opam/4.13.1/lib/ocaml"
+#      ; standard_library = "/home/ubuntu/.opam/4.13.1/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X030"
+#      ; cmi_magic_number = "Caml1999I030"
+#      ; cmo_magic_number = "Caml1999O030"
+#      ; cma_magic_number = "Caml1999A030"
+#      ; cmx_magic_number = "Caml1999Y030"
+#      ; cmxa_magic_number = "Caml1999Z030"
+#      ; ast_impl_magic_number = "Caml1999M030"
+#      ; ast_intf_magic_number = "Caml1999N030"
+#      ; cmxs_magic_number = "Caml1999D030"
+#      ; cmt_magic_number = "Caml1999T030"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+# Workspace root: /home/ubuntu/snake
+$ (cd _build/default && .ppx/57ef275c515ec1fe105f6ff0979f5a61/ppx.exe --cookie 'library-name="snake_lib"' -o lib/game.pp.ml --impl lib/game.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.13.1/bin/ocamldep.opt -modules -impl lib/game.pp.ml) > _build/default/lib/.snake_lib.objs/game.pp.ml.d
+$ (cd _build/default && /home/ubuntu/.opam/4.13.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -20 -w -27 -w -32 -w -34 -w -37 -w -39 -g -I lib/.snake_lib.objs/byte -I lib/.snake_lib.objs/native -I /home/ubuntu/.opam/4.13.1/lib/async -I /home/ubuntu/.opam/4.13.1/lib/async/async_command -I /home/ubuntu/.opam/4.13.1/lib/async/async_quickcheck -I /home/ubuntu/.opam/4.13.1/lib/async/async_rpc -I /home/ubuntu/.opam/4.13.1/lib/async_kernel -I /home/ubuntu/.opam/4.13.1/lib/async_kernel/persistent_connection_kernel -I /home/ubuntu/.opam/4.13.1/lib/async_rpc_kernel -I /home/ubuntu/.opam/4.13.1/lib/async_unix -I /home/ubuntu/.opam/4.13.1/lib/async_unix/thread_pool -I /home/ubuntu/.opam/4.13.1/lib/async_unix/thread_safe_ivar -I /home/ubuntu/.opam/4.13.1/lib/base -I /home/ubuntu/.opam/4.13.1/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.13.1/lib/base/caml -I /home/ubuntu/.opam/4.13.1/lib/base/md5 -I /home/ubuntu/.opam/4.13.1/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.13.1/lib/base_bigstring -I /home/ubuntu/.opam/4.13.1/lib/base_quickcheck -I /home/ubuntu/.opam/4.13.1/lib/bin_prot -I /home/ubuntu/.opam/4.13.1/lib/bin_prot/shape -I /home/ubuntu/.opam/4.13.1/lib/core -I /home/ubuntu/.opam/4.13.1/lib/core/bigstring_unix -I /home/ubuntu/.opam/4.13.1/lib/core/error_checking_mutex -I /home/ubuntu/.opam/4.13.1/lib/core/iobuf_unix -I /home/ubuntu/.opam/4.13.1/lib/core/linux_ext -I /home/ubuntu/.opam/4.13.1/lib/core/nano_mutex -I /home/ubuntu/.opam/4.13.1/lib/core/squeue -I /home/ubuntu/.opam/4.13.1/lib/core/time_stamp_counter -I /home/ubuntu/.opam/4.13.1/lib/core/uuid -I /home/ubuntu/.opam/4.13.1/lib/core_kernel -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/base_for_tests -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/bounded_int_table -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/caml_unix -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/flags -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/iobuf -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/moption -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/pairing_heap -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/sexp_hidden_in_test -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/thread_pool_cpu_affinity -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/thread_safe_queue -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/timing_wheel -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/tuple_pool -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/uopt -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/uuid -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/version_util -I /home/ubuntu/.opam/4.13.1/lib/fieldslib -I /home/ubuntu/.opam/4.13.1/lib/graphics -I /home/ubuntu/.opam/4.13.1/lib/jane-street-headers -I /home/ubuntu/.opam/4.13.1/lib/ocaml/threads -I /home/ubuntu/.opam/4.13.1/lib/parsexp -I /home/ubuntu/.opam/4.13.1/lib/ppx_assert/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_bench/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_expect/collector -I /home/ubuntu/.opam/4.13.1/lib/ppx_expect/common -I /home/ubuntu/.opam/4.13.1/lib/ppx_expect/config -I /home/ubuntu/.opam/4.13.1/lib/ppx_expect/config_types -I /home/ubuntu/.opam/4.13.1/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_here/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.13.1/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/ppx_module_timer/runtime -I /home/ubuntu/.opam/4.13.1/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.13.1/lib/protocol_version_header -I /home/ubuntu/.opam/4.13.1/lib/sexplib -I /home/ubuntu/.opam/4.13.1/lib/sexplib/unix -I /home/ubuntu/.opam/4.13.1/lib/sexplib0 -I /home/ubuntu/.opam/4.13.1/lib/spawn -I /home/ubuntu/.opam/4.13.1/lib/splittable_random -I /home/ubuntu/.opam/4.13.1/lib/stdio -I /home/ubuntu/.opam/4.13.1/lib/time_now -I /home/ubuntu/.opam/4.13.1/lib/timezone -I /home/ubuntu/.opam/4.13.1/lib/typerep -I /home/ubuntu/.opam/4.13.1/lib/variantslib -intf-suffix .ml -no-alias-deps -opaque -open Snake_lib -o lib/.snake_lib.objs/native/snake_lib__Game.cmx -c -impl lib/game.pp.ml)
+$ (cd _build/default && /home/ubuntu/.opam/4.13.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -20 -w -27 -w -32 -w -34 -w -37 -w -39 -g -a -o lib/snake_lib.cmxa lib/.snake_lib.objs/native/snake_lib.cmx lib/.snake_lib.objs/native/snake_lib__Position.cmx lib/.snake_lib.objs/native/snake_lib__Board.cmx lib/.snake_lib.objs/native/snake_lib__Direction.cmx lib/.snake_lib.objs/native/snake_lib__Snake.cmx lib/.snake_lib.objs/native/snake_lib__Apple.cmx lib/.snake_lib.objs/native/snake_lib__Game_state.cmx lib/.snake_lib.objs/native/snake_lib__Game.cmx lib/.snake_lib.objs/native/snake_lib__Snake_graphics.cmx lib/.snake_lib.objs/native/snake_lib__Run.cmx)
+$ (cd _build/default && /home/ubuntu/.opam/4.13.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/snake.exe /home/ubuntu/.opam/4.13.1/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/ubuntu/.opam/4.13.1/lib/base/base_internalhash_types /home/ubuntu/.opam/4.13.1/lib/base/caml/caml.cmxa /home/ubuntu/.opam/4.13.1/lib/sexplib0/sexplib0.cmxa /home/ubuntu/.opam/4.13.1/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/ubuntu/.opam/4.13.1/lib/base/base.cmxa -I /home/ubuntu/.opam/4.13.1/lib/base /home/ubuntu/.opam/4.13.1/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_here/runtime-lib/ppx_here_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_assert/runtime-lib/ppx_assert_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_bench/runtime-lib/ppx_bench_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/base/md5/md5_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ocaml/unix.cmxa -I /home/ubuntu/.opam/4.13.1/lib/ocaml /home/ubuntu/.opam/4.13.1/lib/ocaml/bigarray.cmxa -I /home/ubuntu/.opam/4.13.1/lib/ocaml /home/ubuntu/.opam/4.13.1/lib/fieldslib/fieldslib.cmxa /home/ubuntu/.opam/4.13.1/lib/variantslib/variantslib.cmxa /home/ubuntu/.opam/4.13.1/lib/bin_prot/shape/bin_shape_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/bin_prot/bin_prot.cmxa -I /home/ubuntu/.opam/4.13.1/lib/bin_prot /home/ubuntu/.opam/4.13.1/lib/ppx_inline_test/config/inline_test_config.cmxa /home/ubuntu/.opam/4.13.1/lib/jane-street-headers/jane_street_headers.cmxa /home/ubuntu/.opam/4.13.1/lib/time_now/time_now.cmxa -I /home/ubuntu/.opam/4.13.1/lib/time_now /home/ubuntu/.opam/4.13.1/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/stdio/stdio.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_module_timer/runtime/ppx_module_timer_runtime.cmxa /home/ubuntu/.opam/4.13.1/lib/typerep/typerep_lib.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_expect/common/expect_test_common.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_expect/config_types/expect_test_config_types.cmxa /home/ubuntu/.opam/4.13.1/lib/ppx_expect/collector/expect_test_collector.cmxa -I /home/ubuntu/.opam/4.13.1/lib/ppx_expect/collector /home/ubuntu/.opam/4.13.1/lib/ppx_expect/config/expect_test_config.cmxa /home/ubuntu/.opam/4.13.1/lib/splittable_random/splittable_random.cmxa /home/ubuntu/.opam/4.13.1/lib/base_quickcheck/base_quickcheck.cmxa /home/ubuntu/.opam/4.13.1/lib/base_bigstring/base_bigstring.cmxa -I /home/ubuntu/.opam/4.13.1/lib/base_bigstring /home/ubuntu/.opam/4.13.1/lib/core_kernel/base_for_tests/base_for_tests.cmxa /home/ubuntu/.opam/4.13.1/lib/parsexp/parsexp.cmxa /home/ubuntu/.opam/4.13.1/lib/sexplib/sexplib.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/core_kernel.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core_kernel /home/ubuntu/.opam/4.13.1/lib/core_kernel/moption/moption.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/tuple_pool/tuple_pool.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/pairing_heap/pairing_heap.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/sexp_hidden_in_test/sexp_hidden_in_test.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/thread_pool_cpu_affinity/thread_pool_cpu_affinity.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/uopt/uopt.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/thread_safe_queue/thread_safe_queue.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/timing_wheel/timing_wheel.cmxa /home/ubuntu/.opam/4.13.1/lib/async_kernel/async_kernel.cmxa /home/ubuntu/.opam/4.13.1/lib/ocaml/threads/threads.cmxa -I /home/ubuntu/.opam/4.13.1/lib/ocaml /home/ubuntu/.opam/4.13.1/lib/core/error_checking_mutex/error_checking_mutex.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core/error_checking_mutex /home/ubuntu/.opam/4.13.1/lib/core_kernel/caml_unix/caml_unix.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/flags/flags.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/version_util/version_util.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core_kernel/version_util /home/ubuntu/.opam/4.13.1/lib/sexplib/unix/sexplib_unix.cmxa /home/ubuntu/.opam/4.13.1/lib/spawn/spawn.cmxa -I /home/ubuntu/.opam/4.13.1/lib/spawn /home/ubuntu/.opam/4.13.1/lib/timezone/timezone.cmxa /home/ubuntu/.opam/4.13.1/lib/core/core.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core /home/ubuntu/.opam/4.13.1/lib/core/bigstring_unix/bigstring_unix.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core/bigstring_unix /home/ubuntu/.opam/4.13.1/lib/core_kernel/bounded_int_table/bounded_int_table.cmxa /home/ubuntu/.opam/4.13.1/lib/core_kernel/iobuf/iobuf.cmxa /home/ubuntu/.opam/4.13.1/lib/core/iobuf_unix/iobuf_unix.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core/iobuf_unix /home/ubuntu/.opam/4.13.1/lib/core/nano_mutex/nano_mutex.cmxa /home/ubuntu/.opam/4.13.1/lib/core/squeue/squeue.cmxa /home/ubuntu/.opam/4.13.1/lib/core/linux_ext/linux_ext.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core/linux_ext /home/ubuntu/.opam/4.13.1/lib/async_unix/thread_safe_ivar/thread_safe_ivar.cmxa /home/ubuntu/.opam/4.13.1/lib/async_unix/thread_pool/thread_pool.cmxa /home/ubuntu/.opam/4.13.1/lib/core/time_stamp_counter/time_stamp_counter.cmxa -I /home/ubuntu/.opam/4.13.1/lib/core/time_stamp_counter /home/ubuntu/.opam/4.13.1/lib/core_kernel/uuid/uuid.cmxa /home/ubuntu/.opam/4.13.1/lib/core/uuid/uuid_unix.cmxa /home/ubuntu/.opam/4.13.1/lib/async_unix/async_unix.cmxa -I /home/ubuntu/.opam/4.13.1/lib/async_unix /home/ubuntu/.opam/4.13.1/lib/async/async_command/async_command.cmxa /home/ubuntu/.opam/4.13.1/lib/async/async_quickcheck/async_quickcheck.cmxa /home/ubuntu/.opam/4.13.1/lib/async_kernel/persistent_connection_kernel/persistent_connection_kernel.cmxa /home/ubuntu/.opam/4.13.1/lib/protocol_version_header/protocol_version_header.cmxa /home/ubuntu/.opam/4.13.1/lib/async_rpc_kernel/async_rpc_kernel.cmxa /home/ubuntu/.opam/4.13.1/lib/async/async_rpc/async_rpc.cmxa -I /home/ubuntu/.opam/4.13.1/lib/async/async_rpc /home/ubuntu/.opam/4.13.1/lib/async/async.cmxa /home/ubuntu/.opam/4.13.1/lib/graphics/graphics.cmxa -I /home/ubuntu/.opam/4.13.1/lib/graphics lib/snake_lib.cmxa bin/.snake.eobjs/native/dune__exe__Snake.cmx)

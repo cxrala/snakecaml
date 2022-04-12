@@ -1,0 +1,2 @@
+(** @canonical Snake_exercise04b.Test *)
+module Test = Snake_exercise04b__Test

@@ -1,0 +1,134 @@
+The goal of this is to teach you OCaml while writing a game of snake.
+
+Below is an an explanation of each exercise with a documentaion that
+will help explain each step along the way but also give you the tools
+to debug and understand the rest of provided code.
+
+We encourage you to use your favorite editor to write the code; if you
+aren't already committed to one, we recommend using VSCode. 
+
+Exercise 00: Getting Started
+----------------------------
+=Compilation=
+
+To compile your code while in this directory run 
+
+` $ dune build `
+
+
+Each exercise has its own tests. To run the tests for exercise number N, run 
+
+` $ dune runtest tests/exerciseN `
+
+
+To run the game of snake, run 
+` $ dune exec bin/snake.exe `
+
+To kill the game, hit Ctrl-C in the terminal you launched the game from.
+
+As you can see, we've provided you with something that opens the game
+and spawns an apple, but does nothing else. Not very exciting. Through
+the exercises that follow, you'll turn this into a fully working game!
+
+NOTE: many of the exercises will have ignore statements at the
+top. The reason for this is OCaml complains about unused
+variables. The ignores are present so that you don't have issues
+running the game with parts not yet complete. When you start work on
+an exercise you should remove all the ignores so that the compiler
+will warn you about unused variables.
+
+Exercise 01: Moving Forward
+---------------------------
+Alright. The first thing we need to do is make it so the snake
+actually moves. In lib/snake.ml there is a function stub [move_forward],
+which is supposed to advance the snakes position one square. Open up
+that file, and read and complete the exercise there.
+
+Exercise 02: Turning
+--------------------
+If you run the game now, the snake should walk forward until it reaches the edge
+of the game board, but it doesn't stop -- it keeps going off the edge forever.
+There's no way for you to interact with it, and there's nothing that ends the
+game. We'll tackle both of these, but let's work on keyboard inpupt first. 
+
+Let's complete:
+- exercise 02a in lib/direction.ml
+- exercise 02b in lib/game.ml
+
+Exercise 03: Losing
+-------------------
+As noted in the previous exercise, nothing currently prevents the snake from 
+running off of the black game board. This is the next thing we're going to fix.
+
+Let's complete:
+- exercise 03a in lib/board.ml
+- exercise 03b in lib/game.ml
+
+Exercise 04: Self-collision
+---------------------------
+There's one more kind of collision that should end the game. The snake should
+die if it collides with itself. Once again there are two things we need to fix
+to make this happen.
+
+Let's complete:
+- exercise 04a in lib/snake.ml
+- exercise 04b in lib/game.ml
+
+Exercise 05: Spawning Apples
+----------------------------
+While playing with the game, you might have noticed that there is
+always a red dot that spawns on the board. This represents the apple
+that the snake is supposed to eat. 
+
+You may have noticed it always spawns in the exact same location. This
+is because in apple.ml, we hardcoded that location into the [create]
+function.
+
+Let's fix this by completing exercise 05 in lib/apple.ml
+
+Exercise 06: Consuming Apples
+-----------------------------
+Now our apple can spawn at an arbitrary location but it's still the case that
+nothing happens when the snake goes over the apple.  We need to change it to
+consume the apple, and also cause the snake to grow over its next few
+steps.
+
+Let's complete:
+- exercise 06a in lib/snake.ml
+- exercise 06b in lib/game.ml
+- exercise 06c in lib/snake.ml
+
+Extensions
+----------
+Amazing! We now have a minimally viable version of snake!
+
+All exercies after this are extensions which will update and modify
+the game to make it more varied and more interesting, but these can be
+completed in any order.
+
+Rather than intersperse the explanations amonst each file that you'll
+need to touch, each of these extensions is explained in full detail in
+Exercise##.mkd. The explanation will guide you to what files you need
+to modify, but you'll hvae to figure out the exact changes to be made
+by yourself. 
+
+If you would be excited to try some extensions that are not listed
+here, feel free to do those instead!  Grab a TA if you want to talk
+about an extension that isn't listed here.
+
+Exercise 07: Apple variants
+---------------------------
+There's no reason apples always have to be red. Exercise 07 will walk you
+through how to make different colors of apples that might have different
+behavior for the snake.
+
+Exercise 08: Score
+------------------
+The win condition for the game is filling the board, but maybe displaying a
+current score would be nice. If you added different apple colors in exercise07 
+you could make them worth different amounts of points.
+
+Exercise 09: Multiplayer
+------------------------
+Competitive mode! This will show you how to add more snakes to the game so you
+can play against a friend.
